@@ -1,4 +1,8 @@
 class Post
+  module ActiveModel
+    module Naming; end
+    module Conversion; end
+  end
   require 'minitest/autorun'
   require_relative '../../app/models/post'
   
@@ -48,5 +52,6 @@ class Post
       it.body.must_equal "mybody"
     end
   end
+
 
 end

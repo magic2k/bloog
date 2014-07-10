@@ -14,7 +14,7 @@ class Blog
   end
   # creates new post method and makes blog reference to this blog. .tap is awesome
   def new_post(*args)
-  	post_source.call.tap do |p|
+  	post_source.call(*args).tap do |p|
   		p.blog = self
   	end
   end
