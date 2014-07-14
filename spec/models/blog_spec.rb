@@ -33,7 +33,7 @@ describe Blog do
 
   describe "#add_entry" do
     it "adds the entry to the blog" do
-      entry = Object.new
+      entry = stub!
       @it.add_entry(entry)
       @it.entries.must_include(entry)
     end
@@ -46,4 +46,7 @@ describe Blog do
     @it.new_post(x: 42, y: 'z')
     post_source.verify
   end
+
+
+
 end
